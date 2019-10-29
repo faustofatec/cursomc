@@ -32,7 +32,7 @@ public class Cliente implements Serializable {
 	@JsonManagedReference
 	@OneToMany(mappedBy = "cliente")
 	private List<Endereco> enderecos = new ArrayList<>();
-	
+
 	@ElementCollection
 	@CollectionTable(name = "TELEFONE")
 	private Set<String> telefones = new HashSet<>();
@@ -115,6 +115,7 @@ public class Cliente implements Serializable {
 		this.pedidos = pedidos;
 	}
 
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -139,9 +140,4 @@ public class Cliente implements Serializable {
 			return false;
 		return true;
 	}
-
-
-	
-	
-
 }
